@@ -1,0 +1,36 @@
+[submodule "home/.vim/bundle/jasmine"]
+	path = home/.vim/bundle/jasmine
+	url = git://github.com/claco/jasmine.vim.git
+[submodule "home/.vim/bundle/vim-slim"]
+	path = home/.vim/bundle/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
+[submodule "home/.vim/bundle/vim-coffee-script"]
+	path = home/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "home/.vim/bundle/vim-surround"]
+	path = home/.vim/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "home/.vim/bundle/vim-jade"]
+	path = home/.vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "home/.vim/bundle/ctrlp.vim"]
+	path = home/.vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "home/.vim/bundle/vim-cucumber"]
+	path = home/.vim/bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule "home/.vim/bundle/vim-fugitive"]
+	path = home/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "home/.vim/bundle/vim-rails"]
+	path = home/.vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "home/.vim/bundle/vim-repeat"]
+	path = home/.vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "home/.vim/bundle/vim-vue"]
+	path = home/.vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
+[submodule "home/.vim/bundle/vim-pencil"]
+	path = home/.vim/bundle/vim-pencil
+	url = https://github.com/reedes/vim-pencil
