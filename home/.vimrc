@@ -83,3 +83,20 @@ augroup pencil
   autocmd FileType md,markdown,mkd call pencil#init({'wrap': 'soft' })
   autocmd FileType text         call pencil#init({'wrap': 'hard'})
 augroup END
+
+let g:ale_linters = {
+\   'vue': ['prettier'],
+\   'javascript': ['prettier_standard'],
+\   'cucumber': [],
+\}
+let g:ale_sign_column_always = 1
+
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL

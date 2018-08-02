@@ -1,0 +1,46 @@
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar)%Creset %C(ul)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lo1 = log --graph --oneline --decorate
+  lon = log --show-notes=* --graph --decorate
+  lan = log --graph --decorate
+
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+  c = commit --verbose
+
+  dc = diff --cached
+  d = diff
+
+  # Prints merged branches without the current working branch and mainline branches
+  extraneous-branches = "!f() { git branch --merged | grep -v -e 'gh-pages' -e 'master' -e 'staging' -e 'production' -e 'primary' -e 'default'; }; echo `f`"
+
+  # Deletes the extraneous branches with a soft -d
+  remove-extraneous-branches = "!f() { git extraneous-branches; }; git branch -d `f`"
+  reb = remove-extraneous-branches
+
+[push]
+  default = current
+[pull]
+  default = current
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+[merge]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
+[user]
+	name = Zee Spencer
+	email = zee@wecohere.com
